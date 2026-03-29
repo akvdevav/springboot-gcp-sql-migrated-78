@@ -63,6 +63,12 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
+        <!-- Spring Cache abstraction (required for RedisCacheManager auto‑configuration) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
         <!-- PostgreSQL driver (target DB) -->
         <dependency>
             <groupId>org.postgresql</groupId>
