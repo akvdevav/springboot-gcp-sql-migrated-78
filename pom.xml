@@ -99,6 +99,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- Disable execution of data.sql which may contain non‑PostgreSQL syntax -->
+                    <jvmArguments>-Dspring.sql.init.mode=never</jvmArguments>
+                </configuration>
             </plugin>
 
             <plugin>
