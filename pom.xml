@@ -26,16 +26,17 @@
 
     <dependencies>
 
-        <!-- Spring Web (war packaging, Tomcat excluded) -->
+        <!-- Spring Web (war packaging, Tomcat provided) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+
+        <!-- Tomcat servlet container (provided for WAR) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Spring Data JPA -->
